@@ -287,7 +287,7 @@
 .cpxq{ margin-top: 0%; margin-bottom: 3%;}
 .cpxq_t_l{ float:left; width:48%;}
 .sp-wrap{ display:none; line-height:0; font-size:0;}
-.sp-thumbs{ width:100%;}
+.sp-thumbs{ width:105%;}
 .sp-thumbs img{ max-width:100%;}
 .sp-thumbs a:link, .sp-thumbs a:visited{ margin:0 0.5%; width:80px; height:60px; border:1px #eaeaea solid; overflow:hidden; opacity:.3; display:inline-block; background-size:cover; background-position:center; -webkit-transition:all .2s ease-out; -moz-transition:all .2s ease-out; -ms-transition:all .2s ease-out;-o-transition:all .2s ease-out; transition:all .2s ease-out;}
 .sp-thumbs a:hover{opacity:1;}
