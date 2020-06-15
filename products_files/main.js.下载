@@ -1,0 +1,116 @@
+﻿$(function(){
+	//导航下拉
+	var $subNav = $("header .nav-link .sub-menu");
+	var $subNavli = $("header .nav-link .sub-menu .boxs");
+	var $navLi = $("header .nav-link .nav li.sub-li");
+	$navLi.hover(function() {
+		var navliIndex = $(this).index();
+		$subNav.stop(true,true).show();
+		$subNavli.eq(navliIndex).stop(true,true).show();
+		$subNavli.eq(navliIndex).siblings('.boxs').stop(true,true).hide();
+		$(this).addClass('cur').siblings('li').removeClass('cur');
+	},function(){
+		var navliIndex = $(this).index();
+		$subNavli.eq(navliIndex).stop(true,true).hide();
+		$(this).removeClass('cur');
+	});
+	$subNavli.hover(function() {
+		var navliIndex = $(this).index();
+		$subNav.stop(true,true).show();
+		$subNavli.eq(navliIndex).stop(true,true).show();
+		$navLi.eq(navliIndex).addClass('cur');
+	}, function() {
+		$subNav.stop(true,true).hide();
+		$subNavli.stop(true,true).hide();
+		$navLi.removeClass('cur');
+	});
+
+	
+
+	//头部搜索
+	$("header .extra-link .search-ico").on('click', function() {
+		$(".search-al-ert").stop().fadeIn(300);
+		$("body,html").addClass('ovh');
+	});
+	$(".search-al-ert .close").on('click', function() {
+		$(".search-al-ert").stop().hide();
+		$("body,html").removeClass('ovh');
+	});
+	$(".m-sub-menu .top-box .stt").on('click', function() {
+		$(".m-sub-menu").removeClass('show');
+		$(".body-wrap,header").removeClass('left');
+		$("body,html").removeClass('ovh');
+		$(".search-al-ert").show();
+	});
+	//手机站头部导航展开
+	$("header .m-btn").on('click', function() {
+		$(".m-sub-menu").addClass('show');
+		$(".body-wrap,header").addClass('left');
+		$("body,html").addClass('ovh');
+		$(this).addClass('cur');
+	});
+	$(".m-sub-menu .top-box .close").on('click', function() {
+		$(".m-sub-menu").removeClass('show');
+		$(".body-wrap,header").removeClass('left');
+		$("body,html").removeClass('ovh');
+		$("header .m-btn").removeClass('cur');
+	});
+	$(".m-sub-menu .list-wrap span.col-box").on('click', function() {
+		var n = $(this).parent("li").index();
+		$(".m-sub-menu .sec-sub-list .boxs").eq(n).addClass('show');
+	});
+	$(".m-sub-menu .sec-sub-list .return-fir").on('click', function() {
+		$(this).parent(".boxs").removeClass('show');
+	});
+
+	$(".contact-wrap .city-list li").eq(0).addClass('cur');
+	$(".contact-wrap .address .boxs").eq(0).show();
+
+	$(".contact-wrap .city-list li").on('click', function() {
+		$(this).addClass('cur').siblings('li').removeClass('cur');
+		var n = $(this).index();
+		$(".contact-wrap .address .boxs").eq(n).show().siblings('.boxs').hide();
+	});
+
+	//视差效果
+	$(window).scroll(function() {
+        var top = $(window).scrollTop() / 2;
+        $(".ins-ban .bgimg").css('top', top);
+    });
+
+	
+
+	
+	var src = $(".ins-ban .bgimg").attr("src");
+	var insbanimg = $(".ins-ban img.bgimg").attr("src");
+	console.log(insbanimg)
+	if (insbanimg != undefined || insbanimg != null) {
+		_PreLoadImg([
+			src
+		],function(){
+			$(".ins-ban .loader").fadeOut();
+			if ($(window).width() > 800) {
+				Fullinsbg($(".ins-ban"), $(".ins-ban .bgimg"));
+			}
+			$(".ins-ban .bgimg").stop().animate({opacity: 1}, 500,function(){
+				$(".ins-ban").addClass('active');
+			});
+		})
+	}else{
+		$(".ins-ban .loader").fadeOut();
+		if ($(window).width() > 800) {
+			//Fullvideo($(".ins-ban"), $(".ins-ban .bgimg"));
+		}
+		$(".ins-ban .bgimg").stop().animate({opacity: 1}, 500,function(){
+			$(".ins-ban").addClass('active');
+		});
+	}
+});
+
+var isIE = function(){
+	if ((navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/7./i)=="7.") || (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/8./i)=="8.") || (navigator.appName == "Microsoft Internet Explorer" && navigator.appVersion.match(/9./i)=="9.")) {
+		return true;
+	}else{
+		return false;
+	}
+}
