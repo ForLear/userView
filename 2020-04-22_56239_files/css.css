@@ -6,7 +6,7 @@
 }
 @media screen and (max-width: 1024px) {
 
-	header{ height:70px;}
+	header{ height:98px;}
 	header .toper .logo{ width:280px;margin-top: 8px;}
 	header .toper .logo img{ margin-top:0%;} 
 	.muen ul li{line-height:69px; padding: 0 20px; }
