@@ -40,7 +40,7 @@
 .hot-search .hot a{padding: 0 10px}
 .hot-search .search{width: 21%;border: 2px #089df1 solid;height: auto;margin-top: 13px}
 .hot-search .search .input{line-height: 30px;background: none;width: 80%;border: 0;text-indent: 10px;}
-.hot-search .search .submit{line-height: 30px;background: #089df1 url(../首页_files/icon2.png) no-repeat center center;width: 36px;border: 0;overflow: hidden;text-indent: -99px;cursor:pointer;}
+.hot-search .search .submit{line-height: 30px;background: #089df1 url(../homepage_files/icon2.png) no-repeat center center;width: 36px;border: 0;overflow: hidden;text-indent: -99px;cursor:pointer;}
 /*search*/
 
 

@@ -93,6 +93,7 @@
 }
 
 @media screen and (max-width: 720px) {
+	.ny_about_text img {width: 100% !important;}
 	.txter{margin-top:20px;}
 	.derp .more{margin-bottom:15px;}
 	.index-hzhb-title{font-size:20px;}
@@ -160,7 +161,8 @@
 
 @media screen and (max-width: 680px) {
 	header .toper .logo{width: 240px}
-	header .toper .logo img{ margin-top:0%;}
+	header .toper .logo img{ margin-top:0%;
+margin-left: 25px;}
 	.hot-search {line-height: 50px;}
 	.hot-search .hot{width:100%;} 
 	.hot-search .search {width:99%; margin-bottom:13px; margin-top:0}

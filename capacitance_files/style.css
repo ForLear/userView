@@ -40,7 +40,7 @@
 .hot-search .hot a{padding: 0 10px}
 .hot-search .search{width: 21%;border: 2px #089df1 solid;height: auto;margin-top: 13px}
 .hot-search .search .input{line-height: 30px;background: none;width: 80%;border: 0;text-indent: 10px;}
-.hot-search .search .submit{line-height: 30px;background: #089df1 url(../首页_files/icon2.png) no-repeat center center;width: 36px;border: 0;overflow: hidden;text-indent: -99px;cursor:pointer;}
+.hot-search .search .submit{line-height: 30px;background: #089df1 url(../homepage_files/icon2.png) no-repeat center center;width: 36px;border: 0;overflow: hidden;text-indent: -99px;cursor:pointer;}
 /*search*/
 
 
@@ -276,7 +276,8 @@
 .prod_list {padding:30px 0 0 0;margin-top: 0px;overflow: hidden}
 .prod_list ul{ margin-right: -2%;}
 .prod_list li{float: left; width: 31.333%; text-align: center;margin-right: 2%; margin-bottom: 10px;}  
-.prod_list li img{width:95%; border: 1px solid #e2e2e2; padding: 2px;} 
+/* .prod_list li img{width:94%; border: 1px solid #e2e2e2; padding: 2px;}  */
+.prod_list li img{width:275px;height:209px; border: 1px solid #e2e2e2; padding: 2px;} 
 .prod_list li span{ display: block; line-height: 22px; padding: 10px 0;overflow: hidden;text-overflow: ellipsis;white-space: nowrap;font-size: 14px;}
 .prod_list li img:hover{border: 1px solid #089df1;}
 
